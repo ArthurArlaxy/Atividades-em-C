@@ -17,4 +17,5 @@ int main(void){
     printf("What's the country post? ");
     scanf("%i", &country_post);
     printf("The Contact was saved\nName:%s %s\nNumber: %i %i %i",first_name,last_name,country_post,ddd,number);
+    printf("Essa alteracao fiz de outro computador para testar o git e github");
 }
