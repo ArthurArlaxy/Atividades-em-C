@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 int main(void){;
     char frase[100];
@@ -8,8 +9,13 @@ int main(void){;
     printf("Digite uma frase para ver se esta em ordem alfabetica: ");
     scanf("%s", frase);
     lenght = strlen(frase);
+
+    for (i = 0; i < lenght; i++){
+        frase[i] = toupper(frase[i]);
+    }
+    i=0;
     for (i = 1; i < lenght; i++){
-        if (frase[i]>= frase[i-1]){
+        if (frase[i] >= frase[i-1]){
             n = 1;
         }
         else{
@@ -17,10 +23,12 @@ int main(void){;
             break;
         }
         }
+        printf("A frase %s ", frase);
     if(n == 1){
-        printf("Esta em ordem");
+        printf("esta em ordem\n");
     }
     else{
-        printf("Nao esta em ordem");
+        printf("nao esta em ordem\n");
     }
+    return 0;
     }
